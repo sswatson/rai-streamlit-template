@@ -25,7 +25,6 @@ def dataframe_graph(df: pd.DataFrame, edge_label: str = None):
                 label=edge_label,
             )
         )
-    print("nodes and edges defined")
     config = Config(
         width=750,
         height=950,
