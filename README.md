@@ -55,7 +55,12 @@ This starts a server and launches a web browser for you. If everything is set up
 
 ## Deploying the app
 
-To deploy this app, create an account at https://streamlit.io and follow the instructions there. You will need to paste the credentials above into the web app. Also, you should choose Python 3.8 for compatibility with the Python version specified in this `pipenv` environment.
+To deploy this app:
+
+1. Make a repo on GitHub for your app. It can be private or public repo. You should commit the code in this directory (except the secrets file).
+2. Create an account at https://streamlit.io and follow the instructions there. 
+
+You will need to paste the credentials above into the web app. Also, you should choose Python 3.8 for compatibility with the Python version specified in this `pipenv` environment.
 
 ## Next Steps
 
@@ -65,10 +70,14 @@ Check out Streamlit's gallery of apps to see what you can build with Streamlit: 
 
 `Welcome.py`. This is the main file for the Streamlit app. It contains the code that is run when you run `pipenv run streamlit run Welcome.py`.
 
-`pages/1_Example.py`. Streamlit supports multi-page apps via the `pages` directory. The file name dictates that tab name of the page. The code in this file is run when you click on the tab `Example`. The numeric prefix ensures that the tabs are ordered correctly (the number and underscore are not included in the tab name).
+`pages/1_List_Databases.py`. Streamlit supports multi-page apps via the `pages` directory. The file name dictates that tab name of the page. The code in this file is run when you click on the tab `Example`. The numeric prefix ensures that the tabs are ordered correctly. The leading number and the underscore after it are not included in the tab name. Interior underscores are converted to spaces.
+
+`pages/1_Graph_Visualization.py`. This page shows how to issue queries, convert the results to Pandas data frames, and produce graph visualizations based on the results. The example shown is pretty bare-bones. If you want to customize further, you can find more details starting from the [streamlit_agraph repo](https://github.com/ChrisDelClea/streamlit-agraph). The file `lib/graph.py` is intended as a starting point; you should modify it or refactor as needed.
 
 `lib/rai.py`. This is where we put the code that connects to the RelationalAI backend. The context object `ctx` in this file is imported by pages that need to connect to RelationalAI.
 
 `.gitignore`. This file tells Git which files to ignore. This file is important because the `.streamlit/secrets.toml` file should not be committed to version control for security reasons.
 
 `Pipfile` and `Pipfile.lock`. These files are used by `pipenv` to manage the dependencies for this project.
+
+*Note: we use Python 3.8 because that is the only version supported by the Snowpark integration. If you don't anticipate using Snowflake, you can choose any version of Python that is compatible with the libraries you use.*

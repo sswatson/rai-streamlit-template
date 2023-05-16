@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 streamlit = "*"
 rai-sdk = "*"
+streamlit-agraph = "*"
 
 [dev-packages]
 
