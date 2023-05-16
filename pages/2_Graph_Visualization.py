@@ -8,8 +8,6 @@ st.write("""
 ## Graph Visualization
 
 Here's an example showing how you can create a graph visualization:
-
-
 """)
          
 query = """
