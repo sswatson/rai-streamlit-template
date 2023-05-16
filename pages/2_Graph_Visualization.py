@@ -1,8 +1,7 @@
 
 import streamlit as st
 
-from railib import api
-from lib.rai import ctx
+from lib.rai import rai_query
 from lib.graph import dataframe_graph
 
 st.write("""
@@ -19,14 +18,7 @@ def output = range[1, 8, 1], range[4, 12, 2]
 
 st.code(query)
 
-rsp = api.exec(
-    ctx,
-    database="foobar",
-    engine="hello-rel",
-    command=query,
-)
-
-dfs = [relation["table"].to_pandas() for relation in rsp.results]
+dfs = rai_query(query)
 
 dataframe_graph(dfs[0])
 

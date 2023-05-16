@@ -37,11 +37,13 @@ host = "azure.relationalai.com"
 client_id = "9a3tabDb898fksdfjasdjQjfp9FMjfk2"
 client_secret = 
 "9fsdfkqnfs923J-39fjasdfka-fajsafusdDFUDSFNQPFSNdjfs8fsjnwf-DJfnw"
+database = "my-database"
+engine = "my-engine"
 ```
 
-Note that quotation marks are required around the values; you'll have to add these if you are copying and pasting from your local configuration file. Also, the name `[rai]` at the top of this block is required.
+The quotation marks are required around the values; you'll have to add these if you are copying and pasting from your local configuration file. Also, the name `[rai]` at the top of this block is required.
 
-(The credentials above are fake and are for illustrative purposes only. You have to replace them with your own credentials.)
+*Note: The credentials above are fake and are for illustrative purposes only. You have to replace them with your own credentials.*
 
 ## Running the app locally
 

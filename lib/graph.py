@@ -1,5 +1,4 @@
 
-import numpy as np
 import pandas as pd
 
 from streamlit_agraph import agraph, Node, Edge, Config
@@ -27,7 +26,7 @@ def dataframe_graph(df: pd.DataFrame, edge_label: str = None):
         )
     config = Config(
         width=750,
-        height=950,
+        height=450,
         directed=True,
         hierarchical=False,
         timestep=0.25,
