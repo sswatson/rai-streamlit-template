@@ -35,8 +35,7 @@ Use the RelationalAI Console to get your credentials. If you have RelationalAI c
 [rai]
 host = "azure.relationalai.com"
 client_id = "9a3tabDb898fksdfjasdjQjfp9FMjfk2"
-client_secret = 
-"9fsdfkqnfs923J-39fjasdfka-fajsafusdDFUDSFNQPFSNdjfs8fsjnwf-DJfnw"
+client_secret = "9fsdfkqnfs923J-39fjasdfka-fajsafusdDFUDSFNQPFSNdjfs8fsjnwf-DJfnw"
 database = "my-database"
 engine = "my-engine"
 ```
